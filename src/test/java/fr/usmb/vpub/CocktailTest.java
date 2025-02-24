@@ -13,24 +13,24 @@ class CocktailTest {
     }
 
     @Test
-    protected void testPasIngredient() {
+    void testPasIngredient() {
         Assertions.assertEquals(0, cocktail1.getIngrediants().size());
     }
 
     @Test
-    protected void testIngredient() {
+    void testIngredient() {
         cocktail1.add("Limonade", 2.5d);
         Assertions.assertEquals(1, cocktail1.getIngrediants().size());
     }
 
     @Test
-    protected void testBoissonAlcoolisee() {
+    void testBoissonAlcoolisee() {
         cocktail1.add("Limonade", 2.5d);
         Assertions.assertFalse(cocktail1.getAlcoolise());
     }
 
     @Test
-    protected void testPlusieursIngredients() {
+    void testPlusieursIngredients() {
         cocktail1.add("Limonade", 2.5d);
         cocktail1.add("Biere", 100d);
         Assertions.assertEquals(2, cocktail1.getIngrediants().size());

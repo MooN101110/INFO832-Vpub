@@ -17,25 +17,25 @@ class BoissonTest {
     }
 
     @Test
-    protected void CreationBoissonNonAlcoolise(){
+    void CreationBoissonNonAlcoolise(){
         Boisson boisson = new Boisson(nom);
         assertEquals(nom,boisson.toString());
     }
 
     @Test
-    protected void CreationBoissonAlcoolise(){
+    void CreationBoissonAlcoolise(){
         Boisson boisson = new Boisson(nom,degree);
         assertEquals(nom+" (l'abus d'alcool est dangereux pour la sante)",boisson.toString());
     }
 
     @Test
-    protected void CreationBoisson0Degrees(){
+    void CreationBoisson0Degrees(){
         Boisson boisson = new Boisson(nom,0.0F);
         assertEquals(nom, boisson.toString());
     }
 
     @Test
-    protected void CreationBoissonAntiAlcoolise(){
+    void CreationBoissonAntiAlcoolise(){
         Throwable throwable =  assertThrows(Throwable.class, () -> {
             Boisson boisson = new Boisson(nom, -12.0F);
         });
