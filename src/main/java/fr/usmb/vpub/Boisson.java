@@ -23,10 +23,14 @@ public class Boisson {
 	 * @param nom
 	 * @param degre
 	 */
-	public Boisson(String nom, Float degre){
+	public Boisson(String nom, Float degre) {
+		if (degre < 0) {
+			throw new IllegalArgumentException("Le degré d'alcool ne peut pas être négatif.");
+		}
+
 		this.nom = nom;
 		this.degre = degre;
-		this.alcoolise = true;
+		this.alcoolise = (degre > 0);
 	}
 
 	/**

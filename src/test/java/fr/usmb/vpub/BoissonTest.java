@@ -31,11 +31,10 @@ class BoissonTest {
 
     @Test
     void CreationBoissonAntiAlcoolise(){
-        Throwable throwable =  assertThrows(Throwable.class, () -> {
-            Boisson boisson = new Boisson(nom, -12.0F);
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            Boisson boisson = new Boisson("Vin", -12.0F);
         });
-        assertEquals(FileNotFoundException.class, throwable.getClass());
 
-
+        assertEquals("Le degré d'alcool ne peut pas être négatif.", exception.getMessage());
     }
 }
