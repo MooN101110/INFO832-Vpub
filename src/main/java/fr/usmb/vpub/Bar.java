@@ -68,7 +68,7 @@ public class Bar {
 	 * @param boisson
 	 */
 	public void add(Boisson boisson){
-		if(boisson.getAlcoolise() == true){
+		if(boisson.getAlcoolise()){
 			this.boissonAlcoolisee.add(boisson);
 		}else{
 			this.boissonFroide.add(boisson);
@@ -79,7 +79,7 @@ public class Bar {
 	 * @param cocktail
 	 */
 	public void add(Cocktail cocktail){
-		if(cocktail.getAlcoolise() == false){
+		if(!cocktail.getAlcoolise()){
 			this.cocktailSansAlcoole.add(cocktail);
 		}else{
 			this.cocktailAvecAlcoole.add(cocktail);
