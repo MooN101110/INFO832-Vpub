@@ -8,7 +8,7 @@ class CocktailTest {
     private Cocktail cocktail1;
 
     @BeforeEach
-    protected void setUp() {
+    void setUp() {
         cocktail1 = new Cocktail("Monaco");
     }
 

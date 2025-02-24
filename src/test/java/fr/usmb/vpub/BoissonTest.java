@@ -11,11 +11,6 @@ class BoissonTest {
     private String nom="Coca";
     private Float degree= 12.0F;
 
-    @org.junit.jupiter.api.BeforeEach
-    protected void setUp(){
-        //nothinf to do before each test
-    }
-
     @Test
     void CreationBoissonNonAlcoolise(){
         Boisson boisson = new Boisson(nom);
