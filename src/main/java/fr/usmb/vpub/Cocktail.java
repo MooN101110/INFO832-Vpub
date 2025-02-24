@@ -44,7 +44,7 @@ public class Cocktail {
 	 */
 	public Cocktail(String nom){
 		this.nom = nom;
-		this.ingredients = new ArrayList();
+		this.ingredients = new ArrayList<Ingredient>();
 		this.alcoolise = false;
 	}
 

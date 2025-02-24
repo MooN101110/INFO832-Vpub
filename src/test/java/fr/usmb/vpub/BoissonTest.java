@@ -11,30 +11,31 @@ class BoissonTest {
     private String nom="Coca";
     private Float degree= 12.0F;
 
+    @org.junit.jupiter.api.BeforeEach
     protected void setUp(){
-        Boisson boisson = new Boisson(nom);
+        //nothinf to do before each test
     }
 
     @Test
-    public void CreationBoissonNonAlcoolise(){
+    protected void CreationBoissonNonAlcoolise(){
         Boisson boisson = new Boisson(nom);
         assertEquals(nom,boisson.toString());
     }
 
     @Test
-    public void CreationBoissonAlcoolise(){
+    protected void CreationBoissonAlcoolise(){
         Boisson boisson = new Boisson(nom,degree);
         assertEquals(nom+" (l'abus d'alcool est dangereux pour la sante)",boisson.toString());
     }
 
     @Test
-    public void CreationBoisson0Degrees(){
+    protected void CreationBoisson0Degrees(){
         Boisson boisson = new Boisson(nom,0.0F);
         assertEquals(nom, boisson.toString());
     }
 
     @Test
-    public void CreationBoissonAntiAlcoolise(){
+    protected void CreationBoissonAntiAlcoolise(){
         Throwable throwable =  assertThrows(Throwable.class, () -> {
             Boisson boisson = new Boisson(nom, -12.0F);
         });

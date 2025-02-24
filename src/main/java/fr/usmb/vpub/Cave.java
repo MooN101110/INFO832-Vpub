@@ -38,7 +38,7 @@ public class Cave {
 		Boisson retour = null;
 		int i = 0;
 		while (i< rayons.size() && retour == null){
-			if (rayons.get(i).getNom() == nom){
+			if (rayons.get(i).getNom().equals(nom)){
 				retour = rayons.get(i);
 				this.rayons.remove(retour);
 			}

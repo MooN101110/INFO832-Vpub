@@ -13,26 +13,26 @@ class CocktailTest {
     }
 
     @Test
-    public void testPasIngredient() {
-        Assertions.assertEquals(0, cocktail1.ingrediants.size());
+    protected void testPasIngredient() {
+        Assertions.assertEquals(0, cocktail1.getIngrediants().size());
     }
 
     @Test
-    public void testIngredient() {
+    protected void testIngredient() {
         cocktail1.add("Limonade", 2.5d);
-        Assertions.assertEquals(1, cocktail1.ingrediants.size());
+        Assertions.assertEquals(1, cocktail1.getIngrediants().size());
     }
 
     @Test
-    public void testBoissonAlcoolisee() {
+    protected void testBoissonAlcoolisee() {
         cocktail1.add("Limonade", 2.5d);
-        Assertions.assertFalse(cocktail1.alcoolFree());
+        Assertions.assertFalse(cocktail1.getAlcoolise());
     }
 
     @Test
-    public void testPlusieursIngredients() {
+    protected void testPlusieursIngredients() {
         cocktail1.add("Limonade", 2.5d);
         cocktail1.add("Biere", 100d);
-        Assertions.assertEquals(2, cocktail1.ingrediants.size());
+        Assertions.assertEquals(2, cocktail1.getIngrediants().size());
     }
 }

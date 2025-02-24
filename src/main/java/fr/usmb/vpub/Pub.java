@@ -5,9 +5,8 @@ package fr.usmb.vpub;
  */
 public class Pub {
 
-	
-	public Bar bar;
-	public Cave cave;
+	private Bar bar;
+	private Cave cave;
 	
 	/**
 	 * 
@@ -20,7 +19,8 @@ public class Pub {
 	public void approvisionnerBar(String nom){
 		this.bar.add(this.cave.take(nom));
 	}
-	
+
+
 	
 	/**
 	 * @param args
