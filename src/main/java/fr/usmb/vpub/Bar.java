@@ -1,7 +1,5 @@
 package fr.usmb.vpub;
 import java.util.ArrayList;
-import java.util.Vector;
-import java.util.Enumeration;
 
 /**
  * @author Pierre Le Fameux
