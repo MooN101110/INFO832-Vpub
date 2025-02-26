@@ -57,7 +57,7 @@ public class Cave {
 			bld.append("\t" + rayons.get(i).toString() + eol);
 			i++;
 		}
-		retour = retour + bld.toString();
+		retour = retour + bld;
 		return retour;
 	}
 }
