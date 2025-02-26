@@ -1,0 +1,14 @@
+<project>
+
+    <body>
+        <links>
+        </links>
+
+        <menu name="Usefull links">
+            <item name="GitHub" href="https://github.com/MooN101110/INFO832-Vpub"/>
+            <item name="Rapport SonarQube" href="https://sonarcloud.io/summary/overall?id=MooN101110_INFO832-Vpub"/>
+        </menu>
+        <menu ref="reports"/>
+
+    </body>
+</project>

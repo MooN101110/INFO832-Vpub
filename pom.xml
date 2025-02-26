@@ -90,16 +90,29 @@
             <artifactId>sonar-maven-plugin</artifactId>
             <version>3.9.1.2184</version>
         </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.5.0</version>
+            <reportSets>
+                <reportSet>
+                    <reports>
+                        <report>javadoc</report>
+                    </reports>
+                </reportSet>
+            </reportSets>
+        </plugin>
     </plugins>
 </reporting>
 
 <name>VPub</name>
-<description>Un projet de gestion de boissons pour un bar virtuel.</description>
-<url>https://github.com/MooN101110/INFO832-Vpub</url>  <!-- (Facultatif) Lien vers ton projet -->
+    <description>Un projet de gestion de boissons pour un bar virtuel.
+    </description>
+
 <inceptionYear>2025</inceptionYear>
 <organization>
     <name>VPub Inc.</name>
-    <url>https://vpub.com</url>  <!-- (Facultatif) -->
 </organization>
 
 </project>
