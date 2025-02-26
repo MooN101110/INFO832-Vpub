@@ -1,16 +1,17 @@
 package fr.usmb.vpub;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Pierre Le Fameux
  *
  */
 public class Bar {
-	private ArrayList<Boisson> boissonChaude;
-	private ArrayList<Boisson> boissonFroide;
-	private ArrayList<Boisson> boissonAlcoolisee;
-	private ArrayList<Cocktail> cocktailSansAlcoole;
-	private ArrayList<Cocktail> cocktailAvecAlcoole;
+	private List<Boisson> boissonChaude;
+	private List<Boisson> boissonFroide;
+	private List<Boisson> boissonAlcoolisee;
+	private List<Cocktail> cocktailSansAlcoole;
+	private List<Cocktail> cocktailAvecAlcoole;
 	
 	/**
 	 * 
@@ -19,48 +20,47 @@ public class Bar {
 		this.boissonChaude = new ArrayList<Boisson>();
 		this.boissonFroide = new ArrayList<Boisson>();
 		this.boissonAlcoolisee = new ArrayList<Boisson>();
-		
-		this.cocktailAvecAlcoole = new ArrayList<Cocktail>();
 		this.cocktailSansAlcoole = new ArrayList<Cocktail>();
+		this.cocktailAvecAlcoole = new ArrayList<Cocktail>();
 	}
 
-	public ArrayList<Boisson> getBoissonChaude() {
+	public List<Boisson> getBoissonChaude() {
 		return boissonChaude;
 	}
 
-	public void setBoissonChaude(ArrayList<Boisson> boissonChaude) {
+	public void setBoissonChaude(List<Boisson> boissonChaude) {
 		this.boissonChaude = boissonChaude;
 	}
 
-	public ArrayList<Boisson> getBoissonFroide() {
+	public List<Boisson> getBoissonFroide() {
 		return boissonFroide;
 	}
 
-	public void setBoissonFroide(ArrayList<Boisson> boissonFroide) {
+	public void setBoissonFroide(List<Boisson> boissonFroide) {
 		this.boissonFroide = boissonFroide;
 	}
 
-	public ArrayList<Boisson> getBoissonAlcoolisee() {
+	public List<Boisson> getBoissonAlcoolisee() {
 		return boissonAlcoolisee;
 	}
 
-	public void setBoissonAlcoolisee(ArrayList<Boisson> boissonAlcoolisee) {
+	public void setBoissonAlcoolisee(List<Boisson> boissonAlcoolisee) {
 		this.boissonAlcoolisee = boissonAlcoolisee;
 	}
 
-	public ArrayList<Cocktail> getCocktailSansAlcoole() {
+	public List<Cocktail> getCocktailSansAlcoole() {
 		return cocktailSansAlcoole;
 	}
 
-	public void setCocktailSansAlcoole(ArrayList<Cocktail> cocktailSansAlcoole) {
+	public void setCocktailSansAlcoole(List<Cocktail> cocktailSansAlcoole) {
 		this.cocktailSansAlcoole = cocktailSansAlcoole;
 	}
 
-	public ArrayList<Cocktail> getCocktailAvecAlcoole() {
+	public List<Cocktail> getCocktailAvecAlcoole() {
 		return cocktailAvecAlcoole;
 	}
 
-	public void setCocktailAvecAlcoole(ArrayList<Cocktail> cocktailAvecAlcoole) {
+	public void setCocktailAvecAlcoole(List<Cocktail> cocktailAvecAlcoole) {
 		this.cocktailAvecAlcoole = cocktailAvecAlcoole;
 	}
 

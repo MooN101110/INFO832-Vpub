@@ -1,5 +1,7 @@
 package fr.usmb.vpub;
 
+import java.util.logging.Logger;
+
 /**
  * Virtual PUB
  */
@@ -26,6 +28,9 @@ public class Pub {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+
+		Logger logger = Logger.getLogger(Pub.class.getName());
+
 		/* Creation du pub */
 		Pub pub = new Pub();
 
@@ -43,8 +48,8 @@ public class Pub {
 		pub.cave.add(bierre);
 		pub.cave.add(eau);
 		
-		System.out.println("Cave initiale :");
-		System.out.println(pub.cave);
+		logger.info("Cave initiale :");
+		logger.info(pub.cave.toString());
 
 		pub.approvisionnerBar("bierre");
 		pub.approvisionnerBar("Whisky");
@@ -59,11 +64,11 @@ public class Pub {
 		Boisson cafe = new Boisson("cafe");
 		pub.bar.getBoissonChaude().add(cafe);
 		
-		System.out.println(pub.cave);
-		System.out.println(pub.bar);
+		logger.info(pub.cave.toString());
+		logger.info(pub.bar.toString());
 		
-		System.out.println("Boisson servie : " + pub.bar.serv("cafe"));
-		System.out.println(pub.bar);
+		logger.info("Boisson servie : " + pub.bar.serv("cafe"));
+		logger.info(pub.bar.toString());
 	}
 
 }

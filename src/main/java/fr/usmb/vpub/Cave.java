@@ -1,25 +1,26 @@
 package fr.usmb.vpub;
 
 import java.util.ArrayList;
+import java.util.List;
 /**
  * @author Pierre Le Fameux
  *
  */
 public class Cave {
-	private ArrayList<Boisson> rayons;
+	private List<Boisson> rayons;
 	
 	/**
 	 * 
 	 */
 	public Cave(){
-		this.rayons = new ArrayList<Boisson>();
+		this.rayons = new ArrayList<>();
 	}
 
-	public ArrayList<Boisson> getRayons() {
+	public List<Boisson> getRayons() {
 		return rayons;
 	}
 
-	public void setRayons(ArrayList<Boisson> rayons) {
+	public void setRayons(List<Boisson> rayons) {
 		this.rayons = rayons;
 	}
 
@@ -35,16 +36,13 @@ public class Cave {
 	 * @return
 	 */
 	public Boisson take(String nom){
-		Boisson retour = null;
-		int i = 0;
-		while (i< rayons.size() && retour == null){
-			if (rayons.get(i).getNom().equals(nom)){
-				retour = rayons.get(i);
-				this.rayons.remove(retour);
+		for (Boisson boisson : new ArrayList<>(rayons)) { // Copie temporaire pour éviter ConcurrentModificationException
+			if (boisson.getNom().equalsIgnoreCase(nom)) {
+				rayons.remove(boisson);
+				return boisson;
 			}
-			i++;
 		}
-		return retour;
+		return null;
 	}
 	
 	/* (non-Javadoc)

@@ -64,4 +64,43 @@
     </plugins>
 </build>
 
+<reporting>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <version>3.1.2</version>
+        </plugin>
+
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.10</version>
+            <reportSets>
+                <reportSet>
+                    <reports>
+                        <report>report</report>
+                    </reports>
+                </reportSet>
+            </reportSets>
+        </plugin>
+
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version>
+        </plugin>
+    </plugins>
+</reporting>
+
+<name>VPub</name>
+<description>Un projet de gestion de boissons pour un bar virtuel.</description>
+<url>https://github.com/MooN101110/INFO832-Vpub</url>  <!-- (Facultatif) Lien vers ton projet -->
+<inceptionYear>2025</inceptionYear>
+<organization>
+    <name>VPub Inc.</name>
+    <url>https://vpub.com</url>  <!-- (Facultatif) -->
+</organization>
+
 </project>
+

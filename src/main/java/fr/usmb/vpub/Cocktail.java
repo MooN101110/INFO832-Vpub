@@ -1,6 +1,7 @@
 package fr.usmb.vpub;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Pierre Le Fameux
@@ -35,7 +36,7 @@ public class Cocktail {
 	}
 	
 	private String nom;
-	private ArrayList<Ingredient> ingredients;
+	private List<Ingredient> ingredients;
 	private Boolean alcoolise;
 	
 	/**
@@ -44,8 +45,8 @@ public class Cocktail {
 	 */
 	public Cocktail(String nom){
 		this.nom = nom;
-		this.ingredients = new ArrayList<Ingredient>();
 		this.alcoolise = false;
+		this.ingredients = new ArrayList<Ingredient>();
 	}
 
 	/**
@@ -59,11 +60,11 @@ public class Cocktail {
 		this.nom = nom;
 	}
 
-	public ArrayList<Ingredient> getIngrediants(){
+	public List<Ingredient> getIngrediants(){
 		return ingredients;
 	}
 
-	public void setIngredients(ArrayList<Ingredient> ingredients){
+	public void setIngredients(List<Ingredient> ingredients){
 		this.ingredients = ingredients;
 	}
 
