@@ -35,4 +35,5 @@ class CocktailTest {
         cocktail1.add("Biere", 100d);
         Assertions.assertEquals(2, cocktail1.getIngrediants().size());
     }
+    
 }
